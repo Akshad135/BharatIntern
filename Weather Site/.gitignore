@@ -1,0 +1,15 @@
+# Node.js
+node_modules/
+
+# Environment variables
+.env
+
+# Editor files
+.vscode/
+*.code-workspace
+
+# Log files
+*.log
+
+# macOS
+.DS_Store

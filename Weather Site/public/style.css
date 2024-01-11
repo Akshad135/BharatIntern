@@ -1,0 +1,37 @@
+body{
+    background-color: #212121;
+}
+.card {
+    width: 190px;
+    height: 254px;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+   }
+   
+.h1{
+    color: yellow;
+}
+
+.card input {
+    margin-top: 20px;
+    border-radius: 10px;
+    z-index: 1;
+    color: black;
+    font-size: 2em;
+    height: 10%;
+    width: 90%;
+    margin-left: 5px;
+  }
+.weather-info{
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.fields{
+    color: yellow;
+}
+
+  
