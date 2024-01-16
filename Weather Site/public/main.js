@@ -28,12 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
       const icon = weatherData.weather[0].icon;
 
       const weatherHTML = `
-          <p class="fields">City: ${cityName}</p>
-          <p class="fields">Temperature: ${temperature}°C</p>
-          <p class="fields">Description: ${description}</p>
-          <p class="fields">Humidity: ${humidity}%</p>
-          <p class="fields">Pressure: ${pressure} hPa</p>
-          <img src="http://openweathermap.org/img/w/${icon}.png">
+          <div class="fields cityName">${cityName}</div>
+          <div class="components">
+            <div class="fields temp">${temperature}°C</div>
+            <div class="fields">Description: ${description}</div>
+            <div class="fields">Humidity: ${humidity}%</div>
+            <div class="fields">Pressure: ${pressure} hPa</div>
+            <img src="http://openweathermap.org/img/w/${icon}.png">
+            </div> 
       `;
 
       weatherInfoContainer.innerHTML = weatherHTML;
