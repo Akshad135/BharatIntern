@@ -24,18 +24,26 @@ document.addEventListener('DOMContentLoaded', function () {
       const temperature = Math.round(weatherData.main.temp - 273.15);
       const description = weatherData.weather[0].description;
       const humidity = weatherData.main.humidity;
+      const visibility = weatherData.visibility;
       const pressure = weatherData.main.pressure;
+      const windSpeed = weatherData.wind.speed;
       const icon = weatherData.weather[0].icon;
 
       const weatherHTML = `
           <div class="fields cityName">${cityName}</div>
+          <div class="separator"></div>
+          <div class="fields temp-dsc">${temperature}°C | ${description} </div>
           <div class="components">
-            <div class="fields temp">${temperature}°C</div>
-            <div class="fields">Description: ${description}</div>
-            <div class="fields">Humidity: ${humidity}%</div>
-            <div class="fields">Pressure: ${pressure} hPa</div>
-            <img src="http://openweathermap.org/img/w/${icon}.png">
-            </div> 
+            <div class="component-text">
+                <div class="fields">Humidity: ${humidity}%</div>
+                <div class="fields">Visibility: ${visibility / 1000} km</div>
+                <div class="fields">Pressure: ${pressure} hPa</div>
+                <div class="fields">Wind Speed: ${windSpeed} km/hr</div>
+            </div>
+            <div class="cpmponent-img">
+                <img src="http://openweathermap.org/img/w/${icon}.png" class="img" height=150px width=150px>
+            </div>
+          </div> 
       `;
 
       weatherInfoContainer.innerHTML = weatherHTML;
