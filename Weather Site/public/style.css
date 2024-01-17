@@ -14,12 +14,14 @@
 }
 
 .search-bar{
+    display: flex;
     background-color: black;
     height: 80px;
     width: 310px;
     border-radius: 15px;
     margin-bottom: 50px;
 }
+
 .input {
     z-index: 1;
     color: #8707ff;
@@ -30,12 +32,13 @@
     max-width: 190px;
     margin-top: 17px;
     margin-left:20px;
+    height: 20px;
    }
    
    .input:active {
     box-shadow: 2px 2px 15px #8707ff inset;
    }
-   
+
 .h1{
     color: yellow;
 }
